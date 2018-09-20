@@ -3,9 +3,8 @@ from flask import Flask,abort,jsonify,request,render_template
 from sklearn.externals import joblib
 import numpy as np
 import json
-import pickle
 
-gbr=pickle.load('car_price_predictor_notebook/model.pkl')
+gbr=joblib.load('car_price_predictor_notebook/model.pkl')
 
 app=Flask(__name__)
 
@@ -78,4 +77,5 @@ def get_delay():
 
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=True)
+    #app.run(port=8080, debug=True)
+    app.run()

@@ -4,7 +4,7 @@ from sklearn.externals import joblib
 import numpy as np
 import json
 
-gbr=joblib.load('/car_price_predictor_notebook/model.pkl')
+gbr=joblib.load('car_price_predictor_notebook/model.pkl')
 
 app=Flask(__name__)
 

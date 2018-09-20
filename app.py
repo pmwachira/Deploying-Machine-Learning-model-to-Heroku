@@ -3,8 +3,9 @@ from flask import Flask,abort,jsonify,request,render_template
 from sklearn.externals import joblib
 import numpy as np
 import json
+import pickle
 
-gbr=joblib.load('car_price_predictor_notebook/model.pkl')
+gbr=pickle.load('car_price_predictor_notebook/model.pkl')
 
 app=Flask(__name__)
 
